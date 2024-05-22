@@ -2,8 +2,8 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "build Auto-Garden",
             "type": "shell",
-            "label": "Build Auto-Garden",
             "command": "/mingw64/bin/g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
@@ -11,8 +11,9 @@
                 "main.cpp",
                 "garden_manager.cpp",
                 "-o",
-                "${workspaceFolder}/Auto-Garden.exe",
-                "-I${workspaceFolder}/include",
+                "C:/Users/aedhu/OneDrive/Documents/DeakinEng/Project/C-C++/Auto-Garden/Auto-Garden.exe",
+                "-I",
+                "C:/Users/aedhu/OneDrive/Documents/DeakinEng/Project/C-C++/Auto-Garden/include",
                 "-I/mingw64/include",
                 "-I/mingw64/include/splashkit",
                 "-L/mingw64/lib",
@@ -24,19 +25,15 @@
                 "-lfmt",
                 "-lsplashkit",
                 "-static-libgcc",
-                "-static-libstdc++"
+                "-static-libstdc++",
+                "-lws2_32"
             ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "detail": "Build task for the Automated Garden Management System."
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task"
         }
     ]
 }
